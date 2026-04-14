@@ -1,8 +1,8 @@
 <!-- Unit 11 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
+[ ! ] $() Select by Element, ID AND Class 
 [  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
+[ ! ] Add Five CSS Declarations
 [  ] Include Three Images
 
 Select ONE Additional 
@@ -21,24 +21,24 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <button id="color1-button">Color #1</button>
+    <button id="color2-button">Color #2</button>
+    <button id="color3-button">Color #3</button>
+    <h1>Top 3 Colors of <span>All Time</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="color1">Color #1</h3>
+        <p class="purple">More about this Color.</p>
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="color2">Color #2</h3>
+        <p class="blue">More about this Color.</p>
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="color3">Color #3</h3>
+        <p class="red">More about this Color</p>
       </li>
     </ol>
 
@@ -46,19 +46,48 @@ Select ONE Additional
     <script>
 
       // ======================== Button #1
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+      $("#color1-button").click(function () {
+        $("#color1").css("color", "violet");
+
+        //new stuff ↓
+        $("body").css("background-color", "mediumorchid");
+        $("h1").css("color","violet");
+        $("h3").css("color","violet");
+        $("ol").css("color","violet");
+        $("p").css("color","violet");
+        $(".purple").text("Very good, nice and vibrant. The color of grapes, which is also very good.");
+
+        $("#color1").text("PURPLE: This is Medium Orchid");
       });
 
       // ======================== Button #2
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+      $("#color2-button").click(function () {
+        $("#color2").css("color", "blue");
+
+        //new stuff ↓
+        $("body").css("background-color", "cornflowerblue");
+        $("h1").css("color","paleturquoise");
+        $("h3").css("color","paleturquoise");
+        $("ol").css("color","paleturquoise");
+        $("p").css("color","paleturquoise");
+        $(".blue").text("This is the color of the sky, which we need to survive so thats a bonus. This is also the color of water, which is something we also need to survive. Very good.");
+
+        $("#color2").text("BLUE: this is Cornflower Blue");
       });
 
       // ======================== Button #3
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-        $("#mem3").text("Coding Parties! 🎉");
+      $("#color3-button").click(function () {
+        $("#color3").css("color", "tomato");
+
+        //new stuff ↓
+        $("body").css("background-color", "firebrick");
+        $("h1").css("color","tomato");
+        $("h3").css("color","tomato");
+        $("ol").css("color","tomato");
+        $("p").css("color","tomato");
+        $(".red").text("The color of blood, we need this for our hearts. Also fire, which made us civilized (woohoo) and it also is a trype of wood.");
+
+         $("#color3").text("RED: This is Firebrick");
       });
 
 
