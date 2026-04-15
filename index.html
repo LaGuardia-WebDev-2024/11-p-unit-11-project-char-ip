@@ -1,12 +1,12 @@
 <!-- Unit 11 Project
 Requirements
 [ ! ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
+[ ? ] Use Three Different jQuery Methods 
 [ ! ] Add Five CSS Declarations
-[  ] Include Three Images
+[ ! ] Include Three Images
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
+[ yes ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
@@ -29,16 +29,19 @@ Select ONE Additional
       <li>
         <h3 id="color1">Color #1</h3>
         <p class="purple">More about this Color.</p>
+        <img class = "ping" src = "https://people.com/thmb/WrYU44v7O6pz8ICeJQIqDnVc3QQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x303:751x305)/grimace-17fd7eb9f45f496ea47bf260e518cb6a.jpg">
       </li>
 
       <li>
         <h3 id="color2">Color #2</h3>
         <p class="blue">More about this Color.</p>
+        <img class = "bing" src = "https://static.wikia.nocookie.net/lazy-town4817/images/7/72/Sportacus_Flexing_NEW.png/revision/latest?cb=20220524005758">
       </li>
 
       <li>
         <h3 id="color3">Color #3</h3>
         <p class="red">More about this Color</p>
+        <img class = "ring" src=" https://static.wikia.nocookie.net/variety-of-characters/images/2/27/Muno_from_Yo_Gabba_Gabba%21.jpg/revision/latest?cb=20230102223016">
       </li>
     </ol>
     <div id="image"></div>
@@ -46,6 +49,10 @@ Select ONE Additional
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $(".ping").hide();
+      $(".bing").hide();
+      $(".ring").hide();
+
 
       // ======================== Button #1
       $("#color1-button").click(function () {
@@ -58,6 +65,8 @@ Select ONE Additional
         $("ol").css("color","violet");
         $("p").css("color","violet");
         $(".purple").text("Very good, nice and vibrant. The color of grapes, which is also very good.");
+        $(".ping").show(2000);
+        
 
         $("#color1").text("PURPLE: This is Medium Orchid");
 
@@ -73,6 +82,7 @@ Select ONE Additional
         $("h3").css("color","paleturquoise");
         $("ol").css("color","paleturquoise");
         $("p").css("color","paleturquoise");
+         $(".bing").show(2000);
         $(".blue").text("This is the color of the sky, which we need to survive so thats a bonus. This is also the color of water, which is something we also need to survive. Very good.");
 
         $("#color2").text("BLUE: this is Cornflower Blue");
@@ -88,6 +98,7 @@ Select ONE Additional
         $("h3").css("color","tomato");
         $("ol").css("color","tomato");
         $("p").css("color","tomato");
+         $(".ring").show(2000);
         $(".red").text("Very good for it's the color of blood, we need this for our hearts. Also fire, which made us civilized (woohoo) and it also is a type of wood.");
 
          $("#color3").text("RED: This is Firebrick");
